@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
     <title>Best title</title>
 </head>
 
@@ -95,22 +94,38 @@
                                     myPattern="^[0-9]{4}$" autocomplete="off"> <br>
 
                                 <label>Срок действия</label><br>
-                                <select class="card-month card-input" name="valid-month">
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="07">07</option>
-                                    <option value="08">08</option>
-                                    <option value="09">09</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                                <select class="card-year card-input" name="valid-year">
-                                    <!-- JS will create content here -->
-                                </select>
+
+                                <div class="dropdown month-selector">    
+                                    <div class="select">
+                                        <span>01</span>
+                                        <span>&or;</span>
+                                      </div>
+                                    <input type="hidden" name="valid-month" value="01">
+                                    <ul class="dropdown-menu">
+                                        <li id="01">01</li>
+                                        <li id="02">02</li>
+                                        <li id="03">03</li>
+                                        <li id="04">04</li>
+                                        <li id="05">05</li>
+                                        <li id="07">07</li>
+                                        <li id="08">08</li>
+                                        <li id="09">09</li>
+                                        <li id="10">10</li>
+                                        <li id="11">11</li>
+                                        <li id="12">12</li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown year-selector">
+                                    <div class="select">
+                                        <span></span>
+                                        <span>&or;</span>
+                                      </div>
+                                    <input type="hidden" name="valid-year">
+                                    <ul class="dropdown-menu year-list">
+                                        <!-- JS will create content here -->
+                                    </ul>
+                                </div>
 
                                 <div class="card-owner__wrap" style="position: relative;">
                                     <input class="card-owner card-input" type="text" name="card-owner"

@@ -5,6 +5,7 @@ import formSubmit from './formSubmit'
 import './yearSelectCreator'
 import './placeholderVisibility'
 import cardInfo from './cardInfo'
+import './dropdownHandler'
 
 // CardCode formatter
 ['change', 'keyup', 'input'].forEach((e) => {

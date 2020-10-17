@@ -1,9 +1,10 @@
-const select = document.querySelector(".card-year")
 const currentYear = new Date().getFullYear()
+const selector = document.querySelector(".year-selector")
+selector.querySelector('span').innerHTML = currentYear
+selector.querySelector('input').value = currentYear
 
-let options = ''
+let list = ''
 for( let i of [0,1,2,3,4]) {
-    const option = `<option value=${currentYear + i}>${currentYear + i}</option>`
-    options += option
+    list += `<li id=${currentYear + i}>${currentYear + i}</li>`
 }
-select.innerHTML = options
+selector.querySelector('.year-list').innerHTML = list
